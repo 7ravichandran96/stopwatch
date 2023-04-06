@@ -1,0 +1,218 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --background: black;
+    --font: white;
+    --hover: orangered;
+    --active: yellow;
+    --focus: green;
+}
+
+body {
+    background: var(--background);
+    color: var(--font);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    border: 2px solid;
+    padding: 15px 22px;
+    border-radius: 25px;
+    height: 55vh;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 10px 25px;
+    border-radius: 12px;
+}
+
+/* colons animation effect */
+#colon {
+    font-weight: 900;
+    animation: blink 1s ease-in-out infinite;
+
+}
+
+/* animation for colon opacity from 0 to 1 */
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
+}
+
+.btn {
+    padding: 18px 22px;
+    width: 14vw;
+    background: var(--font);
+    border: none;
+    margin: none;
+    font-size: xx-large;
+    color: white;
+    border-radius: 32px;
+    transition: 0.5s;
+}
+
+
+#start {
+    background: rgba(3, 252, 3, 0.7);
+
+}
+
+#start:hover {
+    background: rgba(114, 235, 124, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(110, 245, 140, 1);
+}
+
+#start:active {
+    background: rgba(114, 235, 124, 0.2);
+}
+
+#start:focus {
+    background: rgb(4, 252, 25);
+    color: black;
+    transition: 0.5s;
+}
+
+
+#stop {
+    background: rgba(250, 12, 3, 0.7);
+    transition: 0.5s;
+}
+
+#stop:hover {
+    background: rgba(235, 128, 114, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(235, 128, 114, 1);
+}
+
+#stop:active {
+    background: rgba(235, 128, 114, 0.2);
+}
+
+#stop:focus {
+    background: rgba(250, 12, 3, 1);
+    color: black;
+    transition: 0.5s;
+}
+
+
+#reset {
+    background: rgba(235, 227, 114, 0.7);
+}
+
+#reset:hover {
+    background: rgba(235, 227, 114, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(235, 227, 114, 1);
+}
+
+#reset:active {
+    background: rgba(235, 227, 114, 0.2);
+}
+
+#reset:focus {
+    background: rgba(235, 227, 114, 1);
+    color: black;
+}
+
+
+
+/* media querry starts */
+
+/* mobile view media querry  */
+@media (max-width: 537.98px) {
+    .result {
+        font-size: xx-large;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        width: 20vw;
+        font-size: x-large;
+
+    }
+
+}
+
+@media (max-width: 425px) {
+    .btn {
+        padding: 10px 15px;
+        width: 20vw;
+        font-size: large;
+
+    }
+
+}
+
+@media (max-width: 375px) {
+    main {
+        width: 95vw;
+    }
+
+    .result {
+        font-size: xx-large;
+    }
+
+    .btn {
+        padding: 10px;
+        width: 23vw;
+        font-size: large;
+
+    }
+
+}
+@media (max-width: 320px) {
+    main {
+        width: 98vw;
+    }
+
+    .result {
+
+        font-size:x-large;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: large;
+
+    }
+
+}
